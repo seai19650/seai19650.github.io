@@ -1,5 +1,5 @@
 <template>
-  <div class="is-flex is-align-items-center">
+  <div class="is-flex is-align-items-center contact-link">
     <a :href="link" target="_blank" class="is-flex is-align-items-center is-clickable">
       <figure class="image is-32x32">
         <img alt="" :src="getIconUrl(icon)">
@@ -22,6 +22,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 768px) {
+  .contact-link {
+    justify-content: center;
+  }
+}
 a {
   color: #fff;
   &:hover {

@@ -1,9 +1,9 @@
 <template>
-  <div class="columns do-center">
-    <div class="column is-8">
+  <div class="columns is-multiline do-center-y">
+    <div class="column is-8-desktop">
       <img v-if="image" :src="getImageUrl(image)" alt="">
     </div>
-    <div class="column is-4">
+    <div class="column is-4-desktop">
       <div v-if="labels.length">
         <Label v-for="(label, index) in labels" :key="index" :text="label"/>
       </div>
@@ -30,4 +30,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 768px) {
+  .do-center-y {
+    display: block;
+  }
+}
 </style>

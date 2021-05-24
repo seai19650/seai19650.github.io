@@ -1,17 +1,18 @@
 <template>
-  <h3 class="title is-3">Showcases</h3>
+  <section class="section">
+    <h3 class="title is-3">Showcases</h3>
 
-  <Highlight
-      v-for="(item, index) in items"
-      :key="index"
-      :title="item.title"
-      :description="item.description"
-      :action="item.action"
-      :image="item.image"
-      :labels="item.labels"
-  >
-  </Highlight>
-
+    <Highlight
+        v-for="(item, index) in items"
+        :key="index"
+        :title="item.title"
+        :description="item.description"
+        :action="item.action"
+        :image="item.image"
+        :labels="item.labels"
+    >
+    </Highlight>
+  </section>
 </template>
 
 <script>

@@ -1,45 +1,47 @@
 <template>
-  <div class="columns">
-    <div class="column is-narrow-desktop is-12-mobile">
-      <h3 class="title is-3">Experience</h3>
-      <div class="timeline">
-        <div class="outer-timeline">
-          <div class="inner-timeline">
-            <div class="lines">
-              <div class="dot"></div>
-              <div class="line"></div>
-              <div class="dot"></div>
+  <section class="section">
+    <div class="columns is-multiline">
+      <div class="column is-narrow">
+        <h3 class="title is-3">Experiences</h3>
+        <div class="timeline">
+          <div class="outer-timeline">
+            <div class="inner-timeline is-justify-content-center">
+              <div class="lines">
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="cards">
+                <div v-for="(experience, index) in experiences" :key="index" class="card">
+                  <h4><Label v-for="label in experience.type" :key="label" :text="label"/>{{ experience.timeText }}</h4>
+                  <p>{{ experience.title }}</p>
+                  <div v-if="experience.description" class="is-divider my-3"/>
+                  <p v-if="experience.description">{{ experience.description }}</p>
+                </div>
+              </div>
             </div>
-            <div class="cards">
-              <div v-for="(experience, index) in experiences" :key="index" class="card">
-                <h4><Label v-for="label in experience.type" :key="label" :text="label"/>{{ experience.timeText }}</h4>
-                <p>{{ experience.title }}</p>
-                <div v-if="experience.description" class="is-divider my-3"/>
-                <p v-if="experience.description">{{ experience.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div id="photos">
+          <div v-for="image in images" :key="image.path" class="card stack">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img :src="getExperienceImg(image.path)" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <Label v-for="(label, index) in image.labels" :key="index" :text="label"/>
+              <div class="content">
+                {{ image.explain }}
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="column is-12-mobile">
-      <div id="photos">
-        <div v-for="image in images" :key="image.path" class="card stack">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img :src="getExperienceImg(image.path)" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="card-content">
-            <Label v-for="(label, index) in image.labels" :key="index" :text="label"/>
-            <div class="content">
-              {{ image.explain }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -141,6 +143,24 @@ export default {
     display: table;
     margin-bottom: 12px;
   }
+  @media screen and (max-width: 950px) {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+    gap: 6px;
+  }
+  @media screen and (max-width: 768px) {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    gap: 10px;
+  }
+  @media screen and (max-width: 710px) {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+    gap: 10px;
+  }
 }
 
 .timeline {
@@ -152,9 +172,10 @@ export default {
       display: flex;
 
       .lines {
-        margin-left: 40px;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
         margin-top: 6px;
-
         .dot {
           width: 14px;
           height: 14px;
@@ -170,10 +191,17 @@ export default {
         }
       }
 
+
+
       .cards {
         max-width: 310px;
         margin-left: 12px;
         transform: translateY(-50px);
+
+        @media screen and (max-width: 768px) {
+          max-width: 100%;
+          margin-left: 0;
+        }
 
         .card {
           padding: 20px 15px;

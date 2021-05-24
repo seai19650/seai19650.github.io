@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="bg-cover mb-5 do-center">
-      <div class="full-height do-center">
-        <figure class="image is-300x300 mr-5">
+      <div id="header" class="full-height do-center is-block-mobile p-5">
+        <figure class="image is-300x300">
           <img class="is-rounded" src="@/assets/me.jpg">
         </figure>
         <div class="cover-content has-text-white">
@@ -76,14 +76,9 @@ export default {
     return {
       contacts: [
         {
-          name: 'GitHub',
-          icon: 'github',
-          link: 'https://github.com/seai19650',
-        },
-        {
-          name: 'LinkedIn',
-          icon: 'linkedin',
-          link: 'https://www.linkedin.com/in/kasidisc/',
+          name: 'Email',
+          icon: 'email',
+          text: 'seai_kasidis@hotmail.com',
         },
         {
           name: 'Phone',
@@ -91,10 +86,15 @@ export default {
           text: '+66 63 313 7902',
         },
         {
-          name: 'Email',
-          icon: 'email',
-          text: 'seai_kasidis@hotmail.com',
-        }
+          name: 'LinkedIn',
+          icon: 'linkedin',
+          link: 'https://www.linkedin.com/in/kasidisc/',
+        },
+        {
+          name: 'GitHub',
+          icon: 'github',
+          link: 'https://github.com/seai19650',
+        },
       ]
     }
   }
@@ -108,6 +108,19 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
+  #header {
+    figure {
+      margin-right: 1.5rem;
+    }
+    @media screen and (max-width: 768px) {
+      margin: 20px 0;
+      text-align: center;
+      figure {
+        margin: 0 auto;
+      }
+    }
+  }
 
   .bg-cover {
     width: 100%;

@@ -1,15 +1,15 @@
 <template>
-  <div class="columns is-multiline">
-    <div class="column is-5">
-      <div class="columns is-multiline">
-        <div v-for="(skillName, index) in skillImages" :key="index" class="column is-narrow">
+  <div class="columns is-multiline skills">
+    <div class="column is-5-desktop">
+      <div class="columns is-multiline icons-wrapper">
+        <div v-for="(skillName, index) in skillImages" :key="index" class="column is-narrow icon-skill">
           <figure class="image is-64x64">
             <img :src="getIconUrl(skillName)" alt="">
           </figure>
         </div>
       </div>
     </div>
-    <div class="column">
+    <div class="column is-7-desktop">
       <h3 class="title is-3">Skills</h3>
       <p class="mb-3">
         Normally I work with <b>HTML</b>, <b>CSS</b> (and <b>SCSS</b>), <b>JavaScript</b> almost all the time. I
@@ -66,6 +66,17 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+@media screen and (max-width: 768px) {
+  .skills {
+    flex-direction: column-reverse;
+    display: flex;
+    .icons-wrapper {
+      text-align: center;
+      .icon-skill {
+        display: inline-block;
+      }
+    }
+  }
+}
 </style>
