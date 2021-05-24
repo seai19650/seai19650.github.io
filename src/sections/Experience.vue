@@ -140,7 +140,7 @@ export default {
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid-column;
-    display: table;
+    display: inline-block;
     margin-bottom: 12px;
   }
   @media screen and (max-width: 950px) {
