@@ -40,7 +40,7 @@
 
     </div>
 
-    <footer class="footer">
+    <footer class="footer do-center">
       <div class="columns is-multiline">
         <div class="column is-narrow">
           <p class="has-text-weight-bold has-text-white">Contact</p>
@@ -59,6 +59,7 @@
           </ContactLink>
         </div>
       </div>
+      <small class="credit-icons has-text-white has-text-centered">with help : icons from <a href="https://icons8.com/">icons8</a> ❤️</small>
     </footer>
   </div>
 </template>
@@ -139,7 +140,17 @@ export default {
   }
 
   footer {
+    position: relative;
     background-color: #1F2833;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+    .credit-icons {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 10px;
+    }
   }
 }
 </style>
