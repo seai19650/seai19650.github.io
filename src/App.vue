@@ -2,7 +2,7 @@
   <div>
     <div class="bg-cover mb-5 do-center">
       <div id="header" class="full-height do-center is-block-mobile p-5">
-        <figure class="image is-300x300">
+        <figure class="image is-250x250">
           <img loading="lazy" class="is-rounded" src="@/assets/me.jpg">
         </figure>
         <div class="cover-content has-text-white">
