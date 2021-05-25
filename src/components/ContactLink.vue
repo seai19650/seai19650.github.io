@@ -2,7 +2,7 @@
   <div class="is-flex is-align-items-center contact-link">
     <a :href="link" target="_blank" class="is-flex is-align-items-center is-clickable">
       <figure class="image is-32x32">
-        <img alt="" :src="getIconUrl(icon)">
+        <img loading="lazy" alt="" :src="getIconUrl(icon)">
       </figure>
       <p v-if="link" class="has-text-weight-semibold">{{ name }}</p>
       <p v-else class="has-text-weight-semibold">{{ text }}</p>

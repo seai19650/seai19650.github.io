@@ -1,7 +1,7 @@
 <template>
   <div class="columns is-multiline do-center-y">
     <div class="column is-8-desktop">
-      <img v-if="image" :src="getImageUrl(image)" alt="">
+      <img loading="lazy" v-if="image" :src="getImageUrl(image)" alt="">
     </div>
     <div class="column is-4-desktop">
       <div v-if="labels.length">

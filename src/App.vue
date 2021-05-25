@@ -3,7 +3,7 @@
     <div class="bg-cover mb-5 do-center">
       <div id="header" class="full-height do-center is-block-mobile p-5">
         <figure class="image is-300x300">
-          <img class="is-rounded" src="@/assets/me.jpg">
+          <img loading="lazy" class="is-rounded" src="@/assets/me.jpg">
         </figure>
         <div class="cover-content has-text-white">
           <h1 class="is-size-1">Kasidis Chaowvasin</h1>
@@ -46,7 +46,7 @@
           <p class="has-text-weight-bold has-text-white">Contact</p>
         </div>
         <div class="is-divider-vertical"></div>
-        <div class="column is-12-mobile is-4-desktop">
+        <div class="column is-narrow">
           <ContactLink
               class="mb-1"
               v-for="contact in contacts"

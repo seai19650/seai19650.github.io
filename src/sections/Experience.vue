@@ -28,7 +28,7 @@
           <div v-for="image in images" :key="image.path" class="card stack">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img :src="getExperienceImg(image.path)" alt="Placeholder image">
+                <img loading="lazy" :src="getExperienceImg(image.path)" alt="Placeholder image">
               </figure>
             </div>
             <div class="card-content">

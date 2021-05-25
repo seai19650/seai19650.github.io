@@ -4,7 +4,7 @@
       <div class="columns is-multiline icons-wrapper">
         <div v-for="(skillName, index) in skillImages" :key="index" class="column is-narrow icon-skill">
           <figure class="image is-64x64">
-            <img :src="getIconUrl(skillName)" alt="">
+            <img loading="lazy" :src="getIconUrl(skillName)" alt="">
           </figure>
         </div>
       </div>
