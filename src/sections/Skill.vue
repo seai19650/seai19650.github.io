@@ -28,7 +28,7 @@
       </p>
       <p>
         Besides all that, I have experienced in <b>Linux server administration</b>. I understand a web service <b>deployment</b>
-        with different types of tools. For example, <b>Docker</b>, and <b>Kubernetes</b> just to name a few. Moreover,
+        with different types of tools. For instance, <b>Docker</b>, and <b>Kubernetes</b>.
         I've deployed a number of websites with some major cloud service providers such as <b>Google Cloud</b>,
         <b>AWS</b>, and <b>DigitalOcean</b>.
       </p>
