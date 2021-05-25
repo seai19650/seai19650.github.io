@@ -8,8 +8,8 @@
         <div class="cover-content has-text-white">
           <h1 class="is-size-1">Kasidis Chaowvasin</h1>
           <div class="is-divider" data-content="Portfolio"></div>
-          <p class="mb-4">Hello, I'm Dem. A full-stack web developer. I now mainly work with JavaScript and related technologies - but also comfortable with PHP (Wordpress and Laravel are awesome!)
-            I love trying new things, sharing knowledge, inspiring people, and getting inspired too :)</p>
+          <p class="mb-4">Hello, I'm Dem. A full-stack web developer. I am now mainly working with JavaScript and related technologies. I am also comfortable with PHP (Wordpress and Laravel are awesome!)
+            I love trying new things, sharing ideas, inspiring people, getting inspired, and meeting new people.</p>
             <ContactLink
                 class="mb-1"
                 v-for="contact in contacts"
