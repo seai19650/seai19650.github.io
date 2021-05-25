@@ -105,7 +105,7 @@ export default {
           type: ['Activity'],
           timeText: '2019 - 2020',
           title: 'Leader at Swift Coding Club Thailand',
-          description: 'Organize activities / workshops for students who interested in creating an iOS Application using Swift.'
+          description: 'Organize activities/workshops for students who are interested in creating an iOS Application using Swift.'
         },
         {
           type: ['Activity'],
