@@ -60,7 +60,7 @@ export default {
         {
           path: 'with-tim-cook',
           labels: ['Swift Coding Club Thailand'],
-          explain: 'Had a great opportunity to talk with Tim Cook about Swift Coding Club Thailand that we\'re working on. Teaching students how to build an app, share stories, and inspire them to do more. We strongly believe that this will lead us to a better future!'
+          explain: 'I had an excellent opportunity to talk with Tim Cook about Swift Coding Club Thailand that we\'re working on for a year. Teaching students how to build an app, share stories, and inspire them to do more. We strongly believe that this will lead us to a better future.'
         },
         {
           path: 'scc-1',
@@ -70,17 +70,12 @@ export default {
         {
           path: 'cimb',
           labels: ['Hackathon'],
-          explain: 'Participated in CIMB Conquest (Hackathon) at Malaysia. In the topic "Application that apply new type on security and authentication"'
+          explain: 'Participated in CIMB Conquest (Hackathon) in Malaysia. In the topic "Application that applies new type on security and authentication."'
         },
         {
           path: 'japan',
           labels: ['Exchange Student'],
-          explain: 'Had been selected to\n' +
-              'participate an exchange program in\n' +
-              'Japan for a week. This program let participants join in a college of\n' +
-              'technology (Kosen) like a normal\n' +
-              'students. We had classes with\n' +
-              'Japanese students to shared our culture. Taking and sharing many topics with Japanese students was amazing!'
+          explain: 'Had been selected to participate in an exchange program in Japan for a week. This program lets participants join a college of technology (Kosen) like an ordinary student. We had classes with Japanese students to share our culture. Taking and sharing many topics with Japanese students was terrific.'
         }
       ],
       experiences: [

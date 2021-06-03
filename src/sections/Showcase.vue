@@ -25,7 +25,7 @@ export default {
       items: [
         {
           title: 'Faculty of Information Technology',
-          description: 'Building up the new website for Faculty of Information Technology. Based on Wordpress: Powerful Content Management System. Customized with custom Wordpress theme designed only for this project.',
+          description: 'Building up the new website for the Faculty of Information Technology. Based on WordPress: Powerful Content Management System. Customize it with a custom WordPress theme designed only for this project.',
           action: {
             link: 'https://www.it.kmitl.ac.th',
             text: 'Go to website',
@@ -35,7 +35,7 @@ export default {
         },
         {
           title: 'A Scalable Service Architecture for Resource-Intensive Tasks',
-          description: 'A RESTful-API that handle tasks from users, push tasks to machine learning node(s) in the proper way and intelligently scale depends on load',
+          description: 'A RESTful-API that handles resource-intensive tasks by pushing tasks to machine learning node(s) intelligently and adequately scale depends on the load—currently used by Thailand Science Research and Innovation.',
           action: {
             link: 'https://ieeexplore.ieee.org/document/9158114',
             text: 'Go to IEEE Xplore Paper',
@@ -45,7 +45,7 @@ export default {
         },
         {
           title: 'Registration System for TEDxKMITL',
-          description: 'Implementing a web application that handle user registration and behind the scene process.',
+          description: 'Implemented a web application that handles user registration and behind the scene process.',
           action: {
             link: 'https://blog.zartre.com/tedxkmitl2017-1e92f18687de',
             text: 'Go to Medium (Thai Language)',

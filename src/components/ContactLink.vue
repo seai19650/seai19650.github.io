@@ -1,6 +1,9 @@
 <template>
   <div class="is-flex is-align-items-center contact-link">
-    <a :href="link" target="_blank" class="is-flex is-align-items-center is-clickable">
+    <a :href="link" target="_blank"
+       class="is-flex is-align-items-center"
+       :class="{ 'is-not-clickable' : !isClickable, 'is-clickable' : isClickable }"
+    >
       <figure class="image is-32x32">
         <img loading="lazy" alt="" :src="getIconUrl(icon)">
       </figure>
@@ -16,6 +19,11 @@ export default {
   methods: {
     getIconUrl(name) {
       return require(`@/assets/icons/${name}.png`)
+    }
+  },
+  computed: {
+    isClickable() {
+      return this.link !== undefined
     }
   }
 }
@@ -33,6 +41,9 @@ a {
     p {
       color: #fff;
     }
+  }
+  &.is-not-clickable {
+    cursor: default;
   }
 }
 </style>
