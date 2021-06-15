@@ -40,6 +40,9 @@
 
     </div>
 
+    <!-- hobby section-->
+    <Hobby/>
+
     <footer class="footer do-center">
       <div class="columns is-multiline">
         <div class="column is-narrow">
@@ -68,11 +71,12 @@
 import Skill from "@/sections/Skill";
 import Showcase from "@/sections/Showcase";
 import Experience from "@/sections/Experience";
+import Hobby from "@/sections/Hobby";
 import ContactLink from "@/components/ContactLink";
 
 export default {
   name: "App",
-  components: {ContactLink, Experience, Showcase, Skill},
+  components: {ContactLink, Experience, Showcase, Skill, Hobby},
   data () {
     return {
       contacts: [
