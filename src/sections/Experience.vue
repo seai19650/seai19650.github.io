@@ -82,7 +82,13 @@ export default {
         {
           type: ['Work'],
           timeText: 'Now',
+          title: 'Junior Software Developer at PALO IT Thailand',
+        },
+        {
+          type: ['Work'],
+          timeText: 'June 2020 - August 2021',
           title: 'Software Developer at Fiveloop',
+          description: 'Full-stack developer of web-based CRM using React, Apollo GraphQL, and backend service with Node.js.'
         },
         {
           type: ['Work'],

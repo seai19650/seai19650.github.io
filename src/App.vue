@@ -62,7 +62,12 @@
           </ContactLink>
         </div>
       </div>
-      <small class="credit-icons has-text-white has-text-centered">with help : icons from <a href="https://icons8.com/">icons8</a> ❤️</small>
+      <small class="credit-icons has-text-white has-text-centered mt-4">
+        with help : icons from
+        <a href="https://icons8.com/" target="_blank">icons8</a> ·
+        <a href="https://github.com/cypress-io/cypress-icons" target="_blank">cypress-io</a> ·
+        <a href="https://cucumber.io/" target="_blank">cucumber</a> ❤️
+      </small>
     </footer>
   </div>
 </template>
@@ -84,11 +89,6 @@ export default {
           name: 'Email',
           icon: 'email',
           text: 'seai_kasidis@hotmail.com',
-        },
-        {
-          name: 'Phone',
-          icon: 'phone',
-          text: '+66 63 313 7902',
         },
         {
           name: 'LinkedIn',

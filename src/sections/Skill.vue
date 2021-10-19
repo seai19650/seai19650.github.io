@@ -49,6 +49,8 @@ export default {
         'reactjs',
         'vuejs',
         'graphql',
+        'cypress',
+        'cucumber',
         'php',
         'wordpress',
         'laravel',
