@@ -82,7 +82,7 @@ export default {
         {
           type: ['Work'],
           timeText: 'Now',
-          title: 'Junior Software Developer at PALO IT Thailand',
+          title: 'Intermediate Software Developer at PALO IT Thailand',
         },
         {
           type: ['Work'],
@@ -143,6 +143,10 @@ export default {
     break-inside: avoid-column;
     display: inline-block;
     margin-bottom: 12px;
+    
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
   }
   @media screen and (max-width: 950px) {
     -moz-column-count: 1;

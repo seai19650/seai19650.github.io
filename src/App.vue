@@ -8,8 +8,11 @@
         <div class="cover-content has-text-white">
           <h1 class="is-size-1">Kasidis Chaowvasin</h1>
           <div class="is-divider" data-content="Portfolio"></div>
-          <p class="mb-4">Hello, I'm Dem. A full-stack web developer. I am now mainly working with JavaScript and related technologies. I am also comfortable with PHP (WordPress and Laravel are fantastic!) I love trying new things, sharing ideas, inspiring people, getting inspired, and meeting new people.
-</p>
+            <p class="mb-4">
+              I'm Dem, a full-stack developer who built awesome web and mobile apps.
+              <span class="is-block mt-1">I'm a pro at front-end stuff like React and Vue.js, and I'm also good at backend development with languages like GoLang, SpringBoot, Node.js, and PHP.</span>
+              <span class="is-block mt-1">I'm all about making sure software is built right. I do lots of testing with tools like Cypress, Appium, and Detox to make sure everything works smoothly and reliably. Deploy and deliver with confidence.</span>
+            </p>
             <ContactLink
                 class="mb-1"
                 v-for="contact in contacts"
@@ -26,17 +29,19 @@
 
     <div class="container">
 
-      <!--skill section-->
-      <div class="box">
-        <Skill/>
-      </div>
-
       <!-- showcases section-->
       <Showcase/>
 
       <!-- experience section-->
       <div class="is-divider"></div>
       <Experience/>
+
+      <!--skill section-->
+      <Skill/>
+
+      <!-- chat section -->
+      <div class="is-divider"></div>
+      <ChatWithMe/>
 
     </div>
 
