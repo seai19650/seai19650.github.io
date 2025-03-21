@@ -1,17 +1,19 @@
 <template>
-  <section class="section">
+  <section class="section showcase-section">
     <h3 class="title is-3">Showcases</h3>
 
-    <Highlight
-        v-for="(item, index) in items"
-        :key="index"
-        :title="item.title"
-        :description="item.description"
-        :action="item.action"
-        :image="item.image"
-        :labels="item.labels"
-    >
-    </Highlight>
+    <div>
+      <Highlight
+          v-for="(item, index) in items"
+          :key="index"
+          :title="item.title"
+          :description="item.description"
+          :action="item.action"
+          :images="item.images"
+          :labels="item.labels"
+      >
+      </Highlight>
+    </div>
   </section>
 </template>
 
@@ -30,7 +32,9 @@ export default {
             link: 'https://www.it.kmitl.ac.th',
             text: 'Go to website',
           },
-          image: 'web-it-kmitl.png',
+          images: [
+            'web-it-kmitl.png',
+          ],
           labels: ['Website Development']
         },
         {
@@ -40,7 +44,7 @@ export default {
             link: 'https://ieeexplore.ieee.org/document/9158114',
             text: 'Go to IEEE Xplore Paper',
           },
-          image: 'web-queueing.jpeg',
+          images: ['web-queueing.jpeg'],
           labels: ['Publication', 'IEEE Xplore']
         },
         {
@@ -50,7 +54,7 @@ export default {
             link: 'https://blog.zartre.com/tedxkmitl2017-1e92f18687de',
             text: 'Go to Medium (Thai Language)',
           },
-          image: 'web-tedxkmitl.png',
+          images: ['web-tedxkmitl.png'],
           labels: ['TEDx', 'Website Development']
         }
       ]
@@ -60,5 +64,7 @@ export default {
 </script>
 
 <style scoped>
-
+.showcase-section {
+  overflow: hidden;
+}
 </style>
