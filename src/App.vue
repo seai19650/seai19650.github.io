@@ -6,15 +6,10 @@
           <img loading="lazy" class="is-rounded" src="@/assets/me.jpg">
         </figure>
         <div class="cover-content has-text-white">
-          <div class="columns is-flex-mobile is-hidden-tablet is-centered">
-            <figure class="column image is-flex-mobile is-hidden-tablet">
-              <img loading="lazy" class="is-rounded" src="@/assets/me.jpg">
-            </figure>
-            <div class="column is-11">
-              <h3 class="is-size-3">Kasidis Chaowvasin</h3>
-            </div>
-          </div>
-          <h1 class="is-size-1 is-hidden-mobile">Kasidis Chaowvasin</h1>
+          <figure class="image is-hidden-tablet is-128x128">
+            <img loading="lazy" class="is-rounded" src="@/assets/me.jpg">
+          </figure>
+          <h1 class="is-size-1">Kasidis Chaowvasin</h1>
           <div class="is-divider" data-content="Portfolio"></div>
             <p id="portfolio-description" class="mb-4">
               <span :class="['is-block mt-1', { ['box']: !typingFinished }]"><span class="typing-text">{{ myName }}</span><span class="cursor" v-if="!typingFinished" :class="{ 'blink': cursorBlink }">|</span>, a full-stack developer who built awesome web and mobile apps.</span>

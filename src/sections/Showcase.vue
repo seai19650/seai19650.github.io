@@ -1,8 +1,14 @@
 <template>
-  <section class="section showcase-section">
-    <h3 class="title is-3">Showcases</h3>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <h3 class="title is-3">Showcases</h3>
+        </div>
+      </div>
+    </div>
 
-    <div>
+    <div class="highlights mt-6">
       <Highlight
           v-for="(item, index) in items"
           :key="index"
@@ -63,8 +69,10 @@ export default {
 }
 </script>
 
-<style scoped>
-.showcase-section {
-  overflow: hidden;
-}
+<style lang="scss" scoped>
+  .highlights {
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
 </style>

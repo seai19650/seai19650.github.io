@@ -12,9 +12,12 @@
                 <div class="dot"></div>
               </div>
               <div class="cards">
-                <div v-for="(experience, index) in experiences" :key="index" class="card">
+                <div v-for="(experience, index) in experiences" 
+                     :key="index" 
+                     class="card"
+                     :class="{ 'featured-card': index === 0 }">
                   <h4><Label v-for="label in experience.type" :key="label" :text="label"/>{{ experience.timeText }}</h4>
-                  <p>{{ experience.title }}</p>
+                  <p :class="{ 'featured-title': index === 0 }">{{ experience.title }}</p>
                   <div v-if="experience.description" class="is-divider my-3"/>
                   <p v-if="experience.description">{{ experience.description }}</p>
                 </div>
@@ -81,7 +84,7 @@ export default {
       experiences: [
         {
           type: ['Work'],
-          timeText: 'Now',
+          timeText: 'August 2021 - Now',
           title: 'Intermediate Software Developer at PALO IT Thailand',
         },
         {
@@ -228,6 +231,16 @@ export default {
             line-height: 22px;
             color: #2B2862;
           }
+        }
+
+        .featured-card {
+          background-color: #f0f8ff;
+          border: 2px solid #1e90ff;
+        }
+
+        .featured-title {
+          font-weight: bold;
+          color: #1e90ff;
         }
       }
     }
