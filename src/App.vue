@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bg-cover do-center full-viewport-height">
-      <div id="header" class="full-height do-center is-block-mobile p-5">
+      <div id="header" class="full-height do-center is-block-mobile p-5 pb-8">
         <figure class="image is-hidden-mobile is-250x250">
           <img loading="lazy" class="is-rounded" src="@/assets/me.jpg">
         </figure>
@@ -11,11 +11,16 @@
           </figure>
           <h1 class="is-size-1">Kasidis Chaowvasin</h1>
           <div class="is-divider" data-content="Portfolio"></div>
-            <p id="portfolio-description" class="mb-4">
-              <span :class="['is-block mt-1', { ['box']: !typingFinished }]"><span class="typing-text">{{ myName }}</span><span class="cursor" v-if="!typingFinished" :class="{ 'blink': cursorBlink }">|</span>, a full-stack developer who built awesome web and mobile apps.</span>
-              <span class="is-block mt-1">I'm a pro at front-end stuff like React and Vue.js, backend development with languages like GoLang, SpringBoot, Node.js, and PHP, and mobile development using React Native.</span>
-              <span class="is-block mt-1">I'm all about making sure software is built right. I do lots of testing with tools like Cypress, Appium, and Detox to make sure everything works smoothly and reliably. Deploy and deliver with confidence.</span>
-            </p>
+            <div id="portfolio-description" class="mb-4">
+              <div :class="['is-block mt-1', { ['box']: !typingFinished }]"><span class="typing-text">{{ myName }}</span><span class="cursor" v-if="!typingFinished" :class="{ 'blink': cursorBlink }">|</span>, a full-stack developer who built awesome web and mobile apps.</div>
+              <ul class="skill-bullets has-text-left ml-4 mt-3">
+                <li><i class="fas fa-rocket fa-sm"></i><span>Pro at front-end development with React and Vue.js</span></li>
+                <li><i class="fas fa-tasks fa-sm"></i><span>Backend development with GoLang, SpringBoot, Node.js, and PHP</span></li>
+                <li><i class="fas fa-mobile fa-sm"></i><span>Mobile development using React Native</span></li>
+                <li><i class="fas fa-check-circle fa-sm"></i><span>Extensive testing experience with Cypress, Appium, and Detox</span></li>
+                <li><i class="fas fa-magic fa-sm"></i><span>Focus on reliable software with confident deployment and delivery</span></li>
+              </ul>
+            </div>
             <ContactLink
                 class="mb-1"
                 v-for="contact in contacts"
@@ -188,7 +193,7 @@ export default {
       margin-right: 1.5rem;
     }
     @media screen and (max-width: 768px) {
-      margin: 20px 0;
+      margin: 80px 0;
       text-align: center;
       figure {
         margin: 0 auto;
@@ -226,7 +231,7 @@ export default {
 
   .scroll-down-container {
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     width: 100%;
     text-align: center;
   }
@@ -287,6 +292,32 @@ export default {
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+  }
+  
+  .skill-bullets {
+    list-style-type: none;
+    
+    li {
+      margin-bottom: 0.75rem;
+      color: white;
+      position: relative;
+      line-height: 1.4;
+      text-align: left;
+      display: flex;
+      align-items: center; // Center align items vertically
+      
+      i {
+        color: #66FCF1; // A nice teal color that stands out against dark background
+        flex-shrink: 0; // Prevents icon from shrinking
+        width: 1.5rem; // Fixed width for the icon container
+        text-align: center; // Center the icon horizontally within its container
+        margin-right: 1rem; // Add consistent spacing between icon and text
+      }
+      
+      span {
+        flex: 1; // Allow text to take up remaining space
+      }
+    }
   }
 }
 </style>
