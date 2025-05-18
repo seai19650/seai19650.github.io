@@ -18,8 +18,16 @@
                      :class="{ 'featured-card': index === 0 }">
                   <h4><Label v-for="label in experience.type" :key="label" :text="label"/>{{ experience.timeText }}</h4>
                   <p :class="{ 'featured-title': index === 0 }">{{ experience.title }}</p>
-                  <div v-if="experience.description" class="is-divider my-3"/>
-                  <p v-if="experience.description">{{ experience.description }}</p>
+                  <template v-if="experience.descriptions && experience.descriptions.length > 0">
+                    <div class="is-divider my-3"/>
+                    <ul class="description-list">
+                      <li v-for="(desc, descIndex) in experience.descriptions" 
+                          :key="descIndex"
+                          class="mb-2">
+                        {{ desc }}
+                      </li>
+                    </ul>
+                  </template>
                 </div>
               </div>
             </div>
@@ -30,7 +38,7 @@
         <div id="photos">
           <div v-for="image in images" :key="image.path" class="card stack">
             <div class="card-image">
-              <figure class="image is-4by3">
+              <figure class="image is-4">
                 <img loading="lazy" :src="getExperienceImg(image.path)" alt="Placeholder image">
               </figure>
             </div>
@@ -61,6 +69,16 @@ export default {
       selected: 0,
       images: [
         {
+          path: 'load-testing',
+          labels: ['Performance Testing'],
+          explain: 'Hosting load testing knowledge sharing session with the team. Aims to share knowledge about how to do load testing and how to analyze the result. And the benefit of load testing.'
+        },
+        {
+          path: 'climate-fresk',
+          labels: ['Sustainability'],
+          explain: 'Leading Climate Fresk workshop, enhancing understanding of climate change causes and effects. Contributing to environmental awareness and sustainable development practices.'
+        },
+        {
           path: 'with-tim-cook',
           labels: ['Swift Coding Club Thailand'],
           explain: 'I had an excellent opportunity to talk with Tim Cook about Swift Coding Club Thailand that we\'re working on for a year. Teaching students how to build an app, share stories, and inspire them to do more. We strongly believe that this will lead us to a better future.'
@@ -86,36 +104,52 @@ export default {
           type: ['Work'],
           timeText: 'August 2021 - Now',
           title: 'Intermediate Software Developer at PALO IT Thailand',
+          descriptions: [
+            'Designed and delivered a high-throughput subscription system for True Digital Group, implementing robust frontend (BDD) and backend (TDD) testing practices, and confidently validated its reliability through load testing for over 1 million concurrent users.',
+            'Developed a mobile application using React Native with TypeScript, applying BDD for frontend testing, and built a reactive backend with Java Spring Boot for high-performance',
+            'Developed an internal Kubernetes cluster for deploying in-house tools, leveraging Helm, Azure, and Terraform, fully automated with GitHub Actions for streamlined CI/CD.',
+          ]
         },
         {
           type: ['Work'],
           timeText: 'June 2020 - August 2021',
           title: 'Software Developer at Fiveloop',
-          description: 'Full-stack developer of web-based CRM using React, Apollo GraphQL, and backend service with Node.js.'
+          descriptions: [
+            'Full-stack developer of web-based CRM using React, Apollo GraphQL, and backend service with Node.js'
+          ]
         },
         {
           type: ['Work'],
           timeText: '2019-2020',
           title: 'Software Developer at Montivory',
-          description: 'Develop websites using Adobe Experience Manager.'
+          descriptions: [
+            'Develop websites using Adobe Experience Manager'
+          ]
         },
         {
           type: ['Work'],
           timeText: 'June 2019 - August 2019',
           title: 'Backend Developer (Intern) at Morphosis',
-          description: 'Be a part of an international developer team. Mainly worked on back-end.'
+          descriptions: [
+            'Be a part of an international developer team',
+            'Mainly worked on back-end development'
+          ]
         },
         {
           type: ['Activity'],
           timeText: '2019 - 2020',
           title: 'Leader at Swift Coding Club Thailand',
-          description: 'Organize activities/workshops for students who are interested in creating an iOS Application using Swift.'
+          descriptions: [
+            'Organize activities/workshops for students who are interested in creating an iOS Application using Swift'
+          ]
         },
         {
           type: ['Activity'],
           timeText: '17 - 23 June 2018',
           title: 'Exchange Student at JST',
-          description: 'Had an opportunity to be a Japanese student for a week!'
+          descriptions: [
+            'Had an opportunity to be a Japanese student for a week!'
+          ]
         }
       ]
     }
@@ -137,6 +171,15 @@ export default {
 
   img {
     object-fit: cover;
+  }
+
+  .card-image {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      }
   }
 
   .card.stack {
@@ -230,6 +273,20 @@ export default {
             font-size: 16px;
             line-height: 22px;
             color: #2B2862;
+          }
+
+          .description-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+            
+            li {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 22px;
+              color: #2B2862;
+            }
           }
         }
 
