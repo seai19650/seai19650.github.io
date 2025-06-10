@@ -7,10 +7,10 @@
             <Label text="Hobby"/>
             <h3 class="title is-3 has-text-white">Scuba Diving</h3>
             <p class="has-text-white mb-1">
-              I'm a certified open water diver and currently plan to get an advanced license when I have a chance. I love underwater. It's so calm, relax, and beautiful. There's a lot for me and people to explore under the surface.
+              I'm a certified open water diver and plan to earn my advanced license soon. I love being underwater—it's calm, relaxing, and beautiful. There's so much to discover beneath the surface.
             </p>
             <p class="has-text-white">
-              Being an extreme sport, scuba diving not only let me explore the underwater world and meet new people. But it also teaches me to keep calm, manage my fear, and focus on the thing that happens in front of me.
+              Scuba diving not only lets me explore the underwater world and meet new people, but it also teaches me to stay calm, manage fear, and focus on what's happening right in front of me.
             </p>
           </div>
         </div>
